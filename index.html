@@ -9,7 +9,7 @@
   <body>
     <ion-app> 
       <ion-router id="main-router" use-hash="false">
-           <ion-route url="/" redirect-to="/login"></ion-route>
+           <ion-route-redirect from="/" to="/login"></ion-route-redirect>
         <ion-route url="/login" component="login-page"></ion-route>
 
          <ion-route url="/home" component="home-page"></ion-route>

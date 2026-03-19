@@ -1,20 +1,30 @@
+import { createHeader } from '../../shared/Header.js';
+import { logout } from '../../shared/logout.js';  
+ 
 const template = document.createElement('template');
 
 template.innerHTML = `
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Produtos</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    ${createHeader('produto')}
+     <div class="container">
     <ion-content>
-      <p>Página de Produtos</p>
+        <ion-list>
+            <ion-item>
+                <ion-label>Nome do Produto</ion-label>
+                <ion-input placeholder="Digite o nome"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Preço</ion-label>
+                <ion-input type="number" placeholder="0,00"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button expand="block">Salvar</ion-button>
     </ion-content>
-  </ion-page>
+    </div>
 `;
 
-customElements.define('produtos-page', class extends HTMLElement {
-  connectedCallback() {
-    this.appendChild(template.content.cloneNode(true));
-  }
+customElements.define('produto-page', class extends HTMLElement {
+    connectedCallback() {
+        this.appendChild(template.content.cloneNode(true));
+        this.querySelector('#logout-btn').addEventListener('click' , logout);
+    }
 });

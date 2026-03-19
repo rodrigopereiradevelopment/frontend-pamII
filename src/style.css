@@ -4,5 +4,20 @@
     justify-content: center;
     height: 100%;
     padding: 20px;
-    background: #e2ded2; 
+    background: #C49A6C; 
+}
+:root {
+    /* Marrom - Primary */
+    --ion-color-primary: #5D3A1A;
+    --ion-color-primary-rgb: 93, 58, 26;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-shade: #523317;
+    --ion-color-primary-tint: #6d4e31;
+
+    /* Bege/Dourado - Secondary */
+    --ion-color-secondary: #C49A6C;
+    --ion-color-secondary-rgb: 196, 154, 108;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-shade: #ac8760;
+    --ion-color-secondary-tint: #caa47b;
 }
